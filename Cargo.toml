@@ -1,0 +1,12 @@
+# 去掉package，就可以不用src目录了
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+# 定义多个模块的工作目录
+[workspace]
+resolver = "2"
+members = [
+    "./common",
+    "./minigrep",
+]
+# 定义工作目录下的依赖，不能用dependencies因为最外层并不是一个package
+[workspace.dependencies]
