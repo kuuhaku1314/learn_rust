@@ -7,6 +7,10 @@ resolver = "2"
 members = [
     "./common",
     "./minigrep",
+    "./webserver",
 ]
 # 定义工作目录下的依赖，不能用dependencies因为最外层并不是一个package
 [workspace.dependencies]
+
+[profile.release]
+opt-level = 3
